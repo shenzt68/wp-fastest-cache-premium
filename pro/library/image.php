@@ -945,7 +945,7 @@
 				if(isset($res[1]) && $res[1] == "error"){
 					if(isset($res[0]) && preg_match("/Buy\s+the\s+premium/", $res[0])){
 						if(isset($GLOBALS['wp_fastest_cache']) && method_exists($GLOBALS['wp_fastest_cache'], 'rm_folder_recursively')){
-							$GLOBALS["wp_fastest_cache"]->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium/pro/library");
+							//$GLOBALS["wp_fastest_cache"]->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium/pro/library");
 							deactivate_plugins("wp-fastest-cache-premium/wpFastestCachePremium.php");
 						}
 					}
