@@ -25,10 +25,10 @@
 				return false;
 			}else{
 				if(wp_remote_retrieve_response_code($response) == 200){
-					if(wp_remote_retrieve_body($response) == "free"){
+					if(wp_remote_retrieve_body($response) == "pro"){
 						deactivate_plugins("wp-fastest-cache-premium/wpFastestCachePremium.php");
-						$GLOBALS['wp_fastest_cache']->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium");
-						$GLOBALS['wp_fastest_cache']->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium");
+						//$GLOBALS['wp_fastest_cache']->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium");
+						//$GLOBALS['wp_fastest_cache']->rm_folder_recursively(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium");
 					}
 				}
 			}
